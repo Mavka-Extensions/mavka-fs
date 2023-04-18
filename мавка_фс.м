@@ -2,8 +2,7 @@ js "
 const mavka = getMavka();
 const context = getContext();
 
-const module = await import('fs');
-const fs = module.default;
+const fs = require('node:fs');
 
 function isExists (path) {
 	try {
