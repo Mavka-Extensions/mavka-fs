@@ -43,7 +43,7 @@ context.set('чи_існує_шлях', mavka.makeWrappedProxyFunction(([path]) 
 		return mavka.fall(context, mavka.makeText('шлях не є текстом'));
 
 	try {
-		return mavka.toCell(isExists());
+		return mavka.toCell(isExists(path));
 	} catch (error) {
 		return mavka.fall(context, mavka.makeText(`не вдалось виконати дію: ${error.message || error.value?.properties?.value}`));
 	}
